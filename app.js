@@ -74,19 +74,19 @@ const i18n = {
     navReviews: "അഭിപ്രായങ്ങൾ",
     navHow: "ഓർഡർ ചെയ്യുന്ന വിധം",
     cartTitle: "Your Cart",
-    heroBadge: "✨ ഔദ്യോഗിക സൈറ്റ് • എഴുത്തുകാരന്റെ ഒപ്പോടെ (Signed Copies)",
+    heroBadge: "✨ ഔദ്യോഗിക സൈറ്റ് • വിമൽ ബാബു പി. (Official Site)",
     heroTitle: "ജീവിതത്തിന്റെ വിസ്മയങ്ങളും <span class='highlight'>ഹൃദയസ്പർശിയായ സൗഹൃദങ്ങളും</span>.",
     heroSubtext: "വിമൽ ബാബു പി. രചിച്ച രണ്ട് ജനപ്രിയ നോവലുകൾ — 'സെൻട്രൽ ലൈബ്രറിയിലെ സുഹൃത്ത്', 'അഷ്ടദളത്തിലെ സൗഹൃദങ്ങൾ'. ഓരോ പുസ്തകത്തിനും ₹280 മാത്രം. രണ്ട് പുസ്തകങ്ങളും ഒരുമിച്ച് വാങ്ങുമ്പോൾ സൗജന്യ ഡെലിവറി (₹560).",
     btnViewBooks: "View Books",
     btnOrderCombo: "Order Both Books (₹560 Combo)",
     heroRating: "ബെന്യാമിൻ, മധുപാൽ എന്നിവരുടെ വിശിഷ്ട നിരൂപണം",
     stat1Label: "ഓരോ പുസ്തകത്തിനും",
-    stat2Label: "എഴുത്തുകാരന്റെ ഒപ്പോടെ",
+    stat2Label: "യഥാർത്ഥ കോപ്പികൾ",
     stat3Label: "വായനക്കാരുടെ റേറ്റിംഗ്",
     stat4Label: "ഇൻസ്റ്റന്റ് ക്യൂആർ പേയ്മെന്റ്",
     comboTitle: "പ്രത്യേക കോംബോ ഓഫർ (Special Combo)",
     comboHeading: "രണ്ട് പുസ്തകങ്ങളും ഒരുമിച്ച് വാങ്ങാം — ₹560 (Free Shipping)",
-    comboSub: "'സെൻട്രൽ ലൈബ്രറിയിലെ സുഹൃത്ത്' + 'അഷ്ടദളത്തിലെ സൗഹൃദങ്ങൾ'. എഴുത്തുകാരന്റെ പ്രത്യേക ഒപ്പോടെ നിങ്ങളുടെ വീട്ടിലെത്തും.",
+    comboSub: "'സെൻട്രൽ ലൈബ്രറിയിലെ സുഹൃത്ത്' + 'അഷ്ടദളത്തിലെ സൗഹൃദങ്ങൾ'. നിങ്ങളുടെ വീട്ടിലേക്ക് നേരിട്ടെത്തും.",
     btnComboAdd: "Add Both Books (₹560)",
     catalogLabel: "THE BOOKS • പുസ്തകങ്ങൾ",
     catalogHeading: "വിമൽ ബാബു പി. യുടെ രചനകൾ",
@@ -118,7 +118,7 @@ const i18n = {
     labelPincode: "PIN Code *",
     labelUtr: "Payment ID / GPay Transaction UTR * (12 Digits)",
     utrHint: "Enter the 12-digit UPI reference ID found on your payment receipt.",
-    labelDedication: "Personal Dedication Note (Optional)",
+    labelDedication: "Special Note / Message (Optional)",
     btnSendWhatsapp: "Send Order to Author via WhatsApp",
     // Step 3 (Success)
     step3Title: "Order Drafted to WhatsApp!",
@@ -130,19 +130,19 @@ const i18n = {
     navReviews: "Endorsements",
     navHow: "How to Order",
     cartTitle: "Your Cart",
-    heroBadge: "✨ Official Bookstore • Signed Copies by Vimal",
+    heroBadge: "✨ Official Bookstore • Vimal Babu P.",
     heroTitle: "Stories of wonder and <span class='highlight'>heartfelt human connections</span>.",
     heroSubtext: "Two popular novels written by Vimal Babu P. — 'Central Libraryile Suhruth' & 'Ashtadalathile Sauhridhangal'. Just ₹280 per book. Free delivery when you order both books together (₹560).",
     btnViewBooks: "View Books",
     btnOrderCombo: "Order Both Books (₹560 Combo)",
     heroRating: "Celebrated by prominent authors Benyamin & Madhupal",
     stat1Label: "Per Book Price",
-    stat2Label: "Hand-Signed by Author",
+    stat2Label: "Direct from Author",
     stat3Label: "Reader Rating",
     stat4Label: "Instant QR Payment",
     comboTitle: "Special Combo Offer",
     comboHeading: "Get Both Books Together — ₹560 (Free Shipping)",
-    comboSub: "'Central Libraryile Suhruth' + 'Ashtadalathile Sauhridhangal'. Personally hand-signed and delivered straight to your home.",
+    comboSub: "'Central Libraryile Suhruth' + 'Ashtadalathile Sauhridhangal'. Delivered directly to your home.",
     btnComboAdd: "Add Both Books (₹560)",
     catalogLabel: "THE BOOKS",
     catalogHeading: "Novels by Vimal Babu P.",
@@ -174,7 +174,7 @@ const i18n = {
     labelPincode: "PIN Code *",
     labelUtr: "Payment ID / GPay Transaction UTR * (12 Digits)",
     utrHint: "Enter the 12-digit UPI reference ID found on your payment receipt.",
-    labelDedication: "Personal Dedication Note for Title Page (Optional)",
+    labelDedication: "Special Note / Message for Author (Optional)",
     btnSendWhatsapp: "Send Order to Author via WhatsApp",
     // Step 3 (Success)
     step3Title: "Order Drafted to WhatsApp!",
@@ -454,7 +454,7 @@ function updateCartUI() {
           <h4 class="cart-item-title malayalam-font">
             ${item.titleMalayalam}
           </h4>
-          <span class="cart-item-format">₹${item.price} each &bull; Signed Copy</span>
+          <span class="cart-item-format">₹${item.price} each &bull; Direct from Author</span>
         </div>
         <div class="cart-item-controls">
           <div class="quantity-stepper">
@@ -707,7 +707,7 @@ if (sendToWhatsappBtnEl) {
       `📞 *ഫോൺ:* ${phone}\n` +
       `🏠 *ഡെലിവറി വിലാസം:*\n${address}\n` +
       `📍 *PIN Code:* ${pincode || 'N/A'}\n` +
-      (dedication ? `✍️ *ആശംസ കുറിപ്പ്:* "${dedication}"\n` : '') +
+      (dedication ? `✍️ *കുറിപ്പ് / സന്ദേശം:* "${dedication}"\n` : '') +
       `--------------------------------\n` +
       `_(ഗൂഗിൾ പേ പേയ്‌മെന്റ് സ്ക്രീൻഷോട്ട് ഇതിനോടൊപ്പം അറ്റാച്ച് ചെയ്യുന്നു)_`;
 
