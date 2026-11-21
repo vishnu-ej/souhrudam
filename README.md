@@ -1,6 +1,6 @@
 # Souhrudam (സൗഹൃദം) — Official Author Bookstore
 
-Official bookstore website for author **Vimal Babu P. (വിമൽ ബാബു പി.)**, offering signed copies of his celebrated novels with an instant Google Pay / UPI checkout flow and direct WhatsApp order dispatching.
+Official bookstore website for author **Vimal Babu P. (വിമൽ ബാബു പി.)**, offering copies of his celebrated novels with an instant Google Pay / UPI checkout flow and direct WhatsApp order dispatching.
 
 ---
 
@@ -18,7 +18,7 @@ Official bookstore website for author **Vimal Babu P. (വിമൽ ബാബു
 
 3. **Complete 2-Book Combo Set**
    - Price: ₹560 (Free Postal Delivery across India)
-   - Hand-signed copies with personalized author dedication note.
+   - Complete 2-novel set with Free Postal Delivery across India directly from the author.
 
 ---
 
