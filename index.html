@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a91f0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <title>Souhrudam (സൗഹൃദം) — Books by Vimal Babu P.</title>
+  
+  <!-- Fonts: Plus Jakarta Sans for geometric UI + Noto Sans Malayalam for Malayalam typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheet with CSS Variables, Design Tokens & Tailwind v4 theme -->
+  <link rel="stylesheet" href="styles.css?v=5" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR WITH LANGUAGE TOGGLE (മലയാളം / English)
+       ========================================================================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-mark">
+        <div class="brand-icon">S</div>
+        <span class="malayalam-font">സൗഹൃദം</span>
+        <span class="sub-brand" style="font-size: 13px; opacity: 0.6; font-weight: 500; margin-left: 2px;">| Souhrudam</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#collection" id="nav-books" class="nav-link active">പുസ്തകങ്ങൾ</a></li>
+          <li><a href="#endorsements" id="nav-reviews" class="nav-link">അഭിപ്രായങ്ങൾ</a></li>
+          <li><a href="#how-it-works" id="nav-how" class="nav-link">ഓർഡർ ചെയ്യുന്ന വിധം</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Toggle Bar: Default Malayalam with English toggle -->
+        <div class="lang-toggle-wrap" aria-label="Language Selector">
+          <button class="lang-btn active" data-lang="ml" title="മലയാളം">മലയാളം</button>
+          <button class="lang-btn" data-lang="en" title="English">English</button>
+        </div>
+
+        <!-- Cart Button -->
+        <button id="cart-btn" class="cart-btn" aria-label="View Shopping Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+          <span id="cart-badge" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div>
+            <span id="hero-badge" class="chip chip-mint">✨ ഔദ്യോഗിക സൈറ്റ് • എഴുത്തുകാരന്റെ ഒപ്പോടെ (Signed Copies)</span>
+          </div>
+          <h1 id="hero-title" class="hero-title malayalam-font">
+            ജീവിതത്തിന്റെ വിസ്മയങ്ങളും <span class="highlight">ഹൃദയസ്പർശിയായ സൗഹൃദങ്ങളും</span>.
+          </h1>
+          <p id="hero-subtext" class="hero-subtext malayalam-font">
+            വിമൽ ബാബു പി. രചിച്ച രണ്ട് ജനപ്രിയ നോവലുകൾ — 'സെൻട്രൽ ലൈബ്രറിയിലെ സുഹൃത്ത്', 'അഷ്ടദളത്തിലെ സൗഹൃദങ്ങൾ'. ഓരോ പുസ്തകത്തിനും ₹280 മാത്രം. രണ്ട് പുസ്തകങ്ങളും ഒരുമിച്ച് വാങ്ങുമ്പോൾ സൗജന്യ ഡെലിവറി (₹560).
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#collection" id="btn-hero-books" class="btn-primary">
+              View Books
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <button onclick="addComboToCart()" id="btn-hero-combo" class="btn-outline">
+              Order Both Books (₹560 Combo)
+            </button>
+          </div>
+
+          <div class="trust-rating-row">
+            <span class="stars-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0e7040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <strong>4.9 / 5.0</strong>
+            </span>
+            <span>&bull;</span>
+            <span id="hero-rating" class="malayalam-font">ബെന്യാമിൻ, മധുപാൽ എന്നിവരുടെ വിശിഷ്ട നിരൂപണം</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-book-showcase">
+            <img src="assets/images/both-books.jpg" alt="വിമൽ ബാബു പി. യുടെ പുസ്തകങ്ങൾ" class="hero-duo-image" />
+            <div class="hero-duo-caption">
+              <div>
+                <strong style="color: var(--color-carbon); font-size: 14px;">2 Books Collection</strong>
+                <div style="font-size: 12px; color: var(--color-pencil);">₹280 each &bull; Author Signed</div>
+              </div>
+              <span class="chip chip-mint" style="font-size: 12px;">Google Pay Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. STAT COUNTER BAND
+       ========================================================================= -->
+  <section class="stats-band">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+          <div>
+            <div class="stat-number">₹280</div>
+            <div id="stat1-label" class="stat-label">ഓരോ പുസ്തകത്തിനും</div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 2 4 4-12 12H6v-4L18 2z"/></svg>
+          <div>
+            <div class="stat-number">100%</div>
+            <div id="stat2-label" class="stat-label">എഴുത്തുകാരന്റെ ഒപ്പോടെ</div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div>
+            <div class="stat-number">4.9 / 5</div>
+            <div id="stat3-label" class="stat-label">വായനക്കാരുടെ റേറ്റിംഗ്</div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          <div>
+            <div class="stat-number">GPay QR</div>
+            <div id="stat4-label" class="stat-label">ഇൻസ്റ്റന്റ് ക്യൂആർ പേയ്മെന്റ്</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. THE BOOKS COLLECTION
+       ========================================================================= -->
+  <section id="collection" class="catalog-section">
+    <div class="container">
+      <div class="section-header">
+        <div id="catalog-label" class="section-label">THE BOOKS • പുസ്തകങ്ങൾ</div>
+        <h2 id="catalog-heading" class="section-title malayalam-font">വിമൽ ബാബു പി. യുടെ രചനകൾ</h2>
+        <p id="catalog-sub" class="section-desc malayalam-font">
+          ഓരോ പുസ്തകത്തിനും ₹280 മാത്രം. രണ്ട് പുസ്തകങ്ങളും ഒരുമിച്ച് വാങ്ങുമ്പോൾ സൗജന്യ ഡെലിവറി (Free Delivery).
+        </p>
+      </div>
+
+      <!-- COMBO OFFER BANNER -->
+      <div class="combo-banner">
+        <div>
+          <div id="combo-chip" class="chip chip-mint" style="margin-bottom: 8px;">പ്രത്യേക കോംബോ ഓഫർ (Special Combo)</div>
+          <h3 id="combo-heading" class="combo-banner-title malayalam-font">രണ്ട് പുസ്തകങ്ങളും ഒരുമിച്ച് വാങ്ങാം — ₹560 (Free Shipping)</h3>
+          <p id="combo-sub" class="combo-banner-sub malayalam-font">
+            'സെൻട്രൽ ലൈബ്രറിയിലെ സുഹൃത്ത്' + 'അഷ്ടദളത്തിലെ സൗഹൃദങ്ങൾ'. എഴുത്തുകാരന്റെ പ്രത്യേക ഒപ്പോടെ നിങ്ങളുടെ വീട്ടിലെത്തും.
+          </p>
+        </div>
+        <div>
+          <button onclick="addComboToCart()" id="btn-combo-add" class="btn-primary" style="white-space: nowrap;">
+            Add Both Books (₹560)
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Book Cards Grid -->
+      <div id="books-grid" class="books-grid">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. ENDORSEMENTS & HOW IT WORKS
+       ========================================================================= -->
+  <section id="endorsements" class="author-section">
+    <div class="container">
+      <div class="author-grid-container">
+        <!-- Poster Frame showing Benyamin & Madhupal Endorsements -->
+        <div class="poster-frame">
+          <img src="assets/images/endorsements-poster.jpg" alt="ബെന്യാമിൻ, മധുപാൽ എന്നിവരുടെ നിരൂപണം" class="poster-img" />
+          <div style="padding: 12px 6px 0 6px; text-align: center; font-size: 13px; color: var(--color-pencil);" class="malayalam-font">
+            സാഹിത്യ-ചലച്ചിത്ര രംഗത്തെ പ്രമുഖർ ഹൃദയപൂർവ്വം പങ്കുവെച്ച വായനാനുഭവം.
+          </div>
+        </div>
+
+        <!-- How Ordering Works Step List Card -->
+        <div class="step-list-card">
+          <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-signal-blue);">
+            How Ordering Works
+          </div>
+          <h3 style="font-size: 22px; font-weight: 700; color: var(--color-carbon); margin-bottom: 6px;" class="malayalam-font">
+            ലളിതമായ 3 ഘട്ടങ്ങളിലൂടെ പുസ്തകം സ്വന്തമാക്കാം
+          </h3>
+
+          <div class="step-row active">
+            <div class="step-num">01.</div>
+            <div>
+              <div class="step-title malayalam-font">Google Pay QR സ്കാൻ ചെയ്ത് പണമടയ്ക്കുക</div>
+              <div class="step-desc malayalam-font">ഒരു പുസ്തകത്തിന് ₹280, രണ്ടിനും കൂടി ₹560 കൃത്യമായി സ്കാൻ ചെയ്ത് അടയ്ക്കുക.</div>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num">02.</div>
+            <div>
+              <div class="step-title malayalam-font">വിവരങ്ങളും Payment ID യും നൽകുക</div>
+              <div class="step-desc malayalam-font">നിങ്ങളുടെ പേര്, ഫോൺ നമ്പർ, വിലാസം, GPay UTR നമ്പർ എന്നിവ രേഖപ്പെടുത്തുക.</div>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num">03.</div>
+            <div>
+              <div class="step-title malayalam-font">വാട്സാപ്പിലേക്ക് നേരിട്ട് ഓർഡർ അയക്കുക</div>
+              <div class="step-desc malayalam-font">'Send' ക്ലിക്ക് ചെയ്യുമ്പോൾ എല്ലാ വിവരങ്ങളും എഴുത്തുകാരന്റെ വാട്സാപ്പിൽ ഡ്രാഫ്റ്റ് ആവുന്നു.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-Up Feature Tiles Row -->
+      <div id="how-it-works" class="tiles-grid">
+        <div class="feature-tile">
+          <div class="feature-tile-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 2 4 4-12 12H6v-4L18 2z"/></svg>
+          </div>
+          <h3 class="feature-tile-title malayalam-font">എഴുത്തുകാരന്റെ ഒപ്പ്</h3>
+          <p class="feature-tile-desc malayalam-font">ഓരോ പുസ്തകത്തിലും വിമൽ ബാബുവിന്റെ സ്വന്തം കയ്യൊപ്പും ആശംസകളും ഉണ്ടായിരിക്കും.</p>
+        </div>
+
+        <div class="feature-tile">
+          <div class="feature-tile-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          </div>
+          <h3 class="feature-tile-title malayalam-font">ഗൂഗിൾ പേ ക്യൂആർ (Google Pay)</h3>
+          <p class="feature-tile-desc malayalam-font">ഏതൊരു UPI ആപ്പ് (GPay, PhonePe, Paytm) വഴിയും സുരക്ഷിതമായ നേരിട്ടുള്ള പേയ്‌മെന്റ്.</p>
+        </div>
+
+        <div class="feature-tile">
+          <div class="feature-tile-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <h3 class="feature-tile-title malayalam-font">വേഗത്തിലുള്ള ഡെലിവറി</h3>
+          <p class="feature-tile-desc malayalam-font">കേരളത്തിലും ഇന്ത്യയിലുടനീളവും വേഗത്തിലുള്ള വിശ്വസനീയമായ പോസ്റ്റൽ ഡെലിവറി.</p>
+        </div>
+
+        <div class="feature-tile">
+          <div class="feature-tile-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="feature-tile-title malayalam-font">നേരിട്ടുള്ള വാട്സാപ്പ് സപ്പോർട്ട്</h3>
+          <p class="feature-tile-desc malayalam-font">സംശയങ്ങൾക്കോ വിവരങ്ങൾക്കോ എഴുത്തുകാരനുമായി നേരിട്ട് വാട്സാപ്പിൽ ബന്ധപ്പെടാം.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. SITE FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-mark">
+            <div class="brand-icon">S</div>
+            <span class="malayalam-font">സൗഹൃദം</span>
+            <span style="font-size: 14px; opacity: 0.6; font-weight: 500;">| Souhrudam</span>
+          </div>
+          <p class="footer-tagline malayalam-font">
+            വിമൽ ബാബു പി. യുടെ ഔദ്യോഗിക പുസ്തകശാല. എഴുത്തുകാരനിൽ നിന്നും നേരിട്ട് നിങ്ങളുടെ കരങ്ങളിലേക്ക്.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">പുസ്തകങ്ങൾ (Books)</h4>
+          <ul class="footer-links">
+            <li><a href="#collection" class="footer-link malayalam-font">സെൻട്രൽ ലൈബ്രറിയിലെ സുഹൃത്ത് (₹280)</a></li>
+            <li><a href="#collection" class="footer-link malayalam-font">അഷ്ടദളത്തിലെ സൗഹൃദങ്ങൾ (₹280)</a></li>
+            <li><a href="#collection" class="footer-link malayalam-font">രണ്ട് പുസ്തകങ്ങളുടെ കോംബോ (₹560)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">പേയ്മെന്റ് &amp; സഹായം</h4>
+          <ul class="footer-links">
+            <li><a href="#how-it-works" class="footer-link">Google Pay QR Checkout</a></li>
+            <li><a href="#how-it-works" class="footer-link">UPI: vimalbabup@okaxis</a></li>
+            <li><a href="#how-it-works" class="footer-link">Free Delivery on 2 Books</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">ഔദ്യോഗിക വാട്സാപ്പ്</h4>
+          <p style="font-size: 14px; color: var(--color-pencil); line-height: 1.6; margin-bottom: 12px;" class="malayalam-font">
+            ഓർഡർ വിവരങ്ങൾക്കോ സ്ക്രീൻഷോട്ട് അയക്കാനോ ബന്ധപ്പെടുക:
+          </p>
+          <div style="font-family: monospace; font-size: 14px; color: var(--color-signal-blue); font-weight: 700;">
+            WhatsApp: +91 98765 43210
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 വിമൽ ബാബു പി. (Vimal Babu P.) All rights reserved.</div>
+        <div>ഔദ്യോഗിക പുസ്തകശാല &bull; Official Author Bookstore</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       7. SLIDE-OVER CART DRAWER (ENGLISH ONLY)
+       ========================================================================= -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="cart-drawer" class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Your Cart</h3>
+      <button id="close-drawer-btn" class="drawer-close-btn" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="cart-items-container" class="drawer-body">
+      <!-- Items dynamically populated by app.js -->
+    </div>
+
+    <div class="drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal" style="font-weight: 600; color: var(--color-ink);">₹0</span>
+      </div>
+      <div class="cart-subtotal-row">
+        <span>Shipping</span>
+        <span id="cart-shipping" style="font-weight: 600;">FREE</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Total Amount</span>
+        <span id="cart-total" style="color: var(--color-signal-blue);">₹0</span>
+      </div>
+
+      <button id="proceed-checkout-btn" class="btn-primary" style="width: 100%; padding: 14px 24px; font-size: 16px;">
+        Proceed to Checkout
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       8. BILLING CHECKOUT MODAL: (ENGLISH ONLY)
+          Step 1: Scan QR Code & Pay Amount (₹280 or ₹560)
+          Step 2: Enter Details (Name, Phone, Address, Payment ID)
+          Step 3: Draft to Author WhatsApp
+       ========================================================================= -->
+  <div id="modal-backdrop" class="modal-backdrop">
+    <div id="checkout-modal" class="checkout-modal">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 11px;">
+          <div class="brand-icon" style="width: 30px; height: 30px; font-size: 14.5px;">S</div>
+          <span style="font-weight: 600; font-size: 16px; color: var(--color-carbon); letter-spacing: -0.01em;">
+            Checkout &bull; Souhrudam
+          </span>
+        </div>
+        <button id="close-modal-btn" class="drawer-close-btn" aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- ===================================================================
+             BILLING STEP 1: SCAN QR CODE & PAY AMOUNT (ENGLISH ONLY)
+             =================================================================== -->
+        <div id="checkout-step-1" style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <span class="chip chip-mint" style="font-size: 11px; padding: 2px 8px; margin-bottom: 4px;">Step 1 of 2</span>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--color-carbon); margin: 0;">
+              Scan QR Code to Pay
+            </h3>
+            <p style="font-size: 13.5px; color: var(--color-pencil); margin-top: 4px;">
+              Scan using Google Pay or any UPI app to pay the exact selected amount below.
+            </p>
+          </div>
+
+          <!-- THE DEDICATED GOOGLE PAY QR CODE CARD -->
+          <div class="gpay-checkout-card">
+            <div class="gpay-badge-header">
+              <!-- Official Google Pay G-Badge -->
+              <svg class="gpay-logo-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+              </svg>
+              <span>Google Pay / UPI Instant QR</span>
+            </div>
+
+            <!-- Items selection summary chip -->
+            <div id="qr-items-summary" class="order-items-summary-chip">
+              <!-- Populated dynamically: 1 book (₹280) or 2 books (₹560) -->
+            </div>
+
+            <div style="font-size: 13.5px; color: var(--color-pencil);">
+              Total Payable Amount:
+              <div id="gpay-payable-amount" class="payable-highlight">₹280</div>
+            </div>
+
+            <!-- DYNAMIC QR CODE CONTAINER -->
+            <div id="dynamic-qr-container" class="dynamic-qr-box">
+              <!-- Injected by app.js via qrcode.min.js -->
+            </div>
+
+            <div class="upi-id-pill">
+              <span>UPI ID: <strong>vimalbabup@okaxis</strong></span>
+              <button id="copy-upi-btn" class="copy-upi-btn" type="button">Copy ID</button>
+            </div>
+
+            <!-- Deep link for phone users -->
+            <a id="upi-deep-link" href="#" class="btn-ghost" style="font-size: 12.5px;">
+              📱 On mobile? Tap here to open Google Pay directly
+            </a>
+          </div>
+
+          <!-- Proceed to Step 2 Button -->
+          <button id="step1-proceed-btn" class="btn-primary" style="width: 100%; padding: 13px; font-size: 15px;">
+            Payment Done, Enter Details &rarr;
+          </button>
+        </div>
+
+        <!-- ===================================================================
+             BILLING STEP 2: GET DETAILS (Written in English, Small & Compact)
+             =================================================================== -->
+        <div id="checkout-step-2" style="display: none; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+            <div>
+              <span class="chip chip-lavender" style="font-size: 11px; padding: 2px 8px; margin-bottom: 4px;">Step 2 of 2</span>
+              <h3 style="font-size: 17px; font-weight: 700; color: var(--color-carbon); margin: 0;">
+                Delivery &amp; Payment Details
+              </h3>
+            </div>
+            <button id="back-to-qr-btn" class="btn-ghost" style="font-size: 12px; padding: 4px 8px;">
+              &larr; Back to QR
+            </button>
+          </div>
+
+          <div id="details-step-amount-badge" class="chip chip-mint" style="align-self: flex-start; font-size: 11.5px; font-weight: 600; padding: 3px 10px;">
+            Amount Paid: ₹280
+          </div>
+
+          <form id="details-form" class="form-grid" onsubmit="return false;" style="gap: 10px;">
+            <div class="form-group">
+              <label class="form-label" for="cust-name">Full Name *</label>
+              <input id="cust-name" type="text" class="form-input" placeholder="e.g. Suresh Kumar" maxlength="60" autocomplete="name" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cust-phone">WhatsApp / Phone *</label>
+              <input id="cust-phone" type="tel" class="form-input" placeholder="+91 98765 43210" maxlength="20" autocomplete="tel" inputmode="tel" required />
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="cust-address">Billing &amp; Delivery Address *</label>
+              <input id="cust-address" type="text" class="form-input" placeholder="House/Flat No, Street, Town, District" maxlength="250" autocomplete="street-address" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cust-pincode">PIN Code *</label>
+              <input id="cust-pincode" type="text" class="form-input" placeholder="e.g. 673001" maxlength="10" inputmode="numeric" pattern="[0-9]*" autocomplete="postal-code" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="gpay-utr">Payment ID / GPay UTR *</label>
+              <input id="gpay-utr" type="text" class="form-input" placeholder="12-digit UPI Ref / UTR" maxlength="24" inputmode="numeric" spellcheck="false" required />
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="cust-dedication">Dedication Note (Optional)</label>
+              <input id="cust-dedication" type="text" class="form-input" placeholder="Custom note for the author to sign in your book" maxlength="200" />
+            </div>
+
+            <div class="form-group full-width" style="margin-top: 4px;">
+              <button id="send-to-whatsapp-btn" type="submit" class="btn-primary" style="width: 100%; padding: 11px 16px; font-size: 14.5px; background-color: #25D366; color: #ffffff; gap: 8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                </svg>
+                Send Order to Author via WhatsApp
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ===================================================================
+             BILLING STEP 3: ORDER SENT TO WHATSAPP DRAFT (ENGLISH ONLY)
+             =================================================================== -->
+        <div id="checkout-step-3" style="display: none; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 16px 0;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background-color: var(--color-mint-whisper); color: var(--color-mint-text); display: flex; align-items: center; justify-content: center;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+
+          <h3 style="font-size: 20px; font-weight: 700; color: var(--color-carbon); margin: 0;">
+            Order Drafted to WhatsApp!
+          </h3>
+          <p style="font-size: 13.5px; color: var(--color-pencil); max-width: 440px; margin: 0;">
+            Your order details have been drafted to the author's WhatsApp. Please send your message along with the payment screenshot.
+          </p>
+
+          <div style="background-color: var(--color-mist); border: 1px solid var(--color-chalk); border-radius: 10px; padding: 14px 20px; width: 100%; max-width: 400px; text-align: left; font-size: 13px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+              <span style="color: var(--color-pencil);">Order Reference ID:</span>
+              <strong id="order-reference-id" style="font-family: monospace; color: var(--color-signal-blue);">SHR-948210</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+              <span style="color: var(--color-pencil);">Payment Verification:</span>
+              <span class="chip chip-mint" style="font-size: 11px; padding: 2px 8px;">GPay UTR Added</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--color-pencil);">Delivery:</span>
+              <span style="font-weight: 500; color: var(--color-ink);">Author Signed &bull; Free Postal Delivery</span>
+            </div>
+          </div>
+
+          <!-- Re-open WhatsApp button if blocked by browser popup blocker -->
+          <a id="whatsapp-open-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background-color: #25D366; gap: 8px; font-size: 14.5px; padding: 11px 20px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+            </svg>
+            Open WhatsApp Again
+          </a>
+
+          <button onclick="closeCheckoutModal()" class="btn-ghost" style="font-size: 13px; margin-top: 2px;">
+            Return to Bookstore
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Offline QR Code Generator library -->
+  <script src="assets/js/qrcode.min.js"></script>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js?v=5"></script>
+</body>
+</html>
