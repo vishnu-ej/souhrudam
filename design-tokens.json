@@ -1,0 +1,181 @@
+{
+  "$schema": "https://tokens.studio/schema.json",
+  "name": "Books by Vimal - Design System Tokens",
+  "version": "1.0.0",
+  "theme": "light",
+  "source": "https://styles.refero.design/style/41e65213-1c4a-41c4-b715-50427fa8926e",
+  "styleReference": "Free Resume Builder",
+  "colors": {
+    "neutral": {
+      "ink": {
+        "value": "#1e2532",
+        "type": "color",
+        "description": "Body text, primary copy, icon strokes, footer text — default ink across running content"
+      },
+      "carbon": {
+        "value": "#0f141e",
+        "type": "color",
+        "description": "Headlines, headings, footer brand mark — darker than Ink for emphasis lift on large type"
+      },
+      "pencil": {
+        "value": "#656e83",
+        "type": "color",
+        "description": "Secondary body text, descriptions, helper copy — sits between Ink and Fog"
+      },
+      "fog": {
+        "value": "#828ba2",
+        "type": "color",
+        "description": "Metadata, secondary borders, icon fills, placeholder text"
+      },
+      "haze": {
+        "value": "#9fa6bb",
+        "type": "color",
+        "description": "Quiet borders, inactive indicators, subtle dividers"
+      },
+      "paper": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Canvas background, card surface, primary text contrast"
+      },
+      "mist": {
+        "value": "#f7f9fc",
+        "type": "color",
+        "description": "Section wash surface, tool backgrounds, table row alternate"
+      },
+      "chalk": {
+        "value": "#d9deeb",
+        "type": "color",
+        "description": "Card borders, table dividers, input boundaries"
+      },
+      "ash": {
+        "value": "#e7eaf4",
+        "type": "color",
+        "description": "Subtle borders, secondary card dividers"
+      }
+    },
+    "brand": {
+      "signalBlue": {
+        "value": "#1a91f0",
+        "type": "color",
+        "description": "Primary action fill, link color, active tab indicator, key emphasis"
+      },
+      "deepSignal": {
+        "value": "#016fd0",
+        "type": "color",
+        "description": "Hover state for primary action buttons"
+      },
+      "iris": {
+        "value": "#5660e8",
+        "type": "color",
+        "description": "Secondary brand accent, tool icons, tinted card illustrations"
+      },
+      "midnight": {
+        "value": "#1a1c6a",
+        "type": "color",
+        "description": "Deep violet tone for high-contrast branding"
+      }
+    },
+    "surfaceWashes": {
+      "lavenderWash": {
+        "value": "#f1f2ff",
+        "type": "color",
+        "description": "Tinted tool card background, feature highlights"
+      },
+      "mintWhisper": {
+        "value": "#e7f4ed",
+        "type": "color",
+        "description": "Positive feedback badge, success states, green tinted callout"
+      },
+      "blushWhisper": {
+        "value": "#ffebe4",
+        "type": "color",
+        "description": "Warm feature card background, attention highlight"
+      },
+      "roseWhisper": {
+        "value": "#edd7df",
+        "type": "color",
+        "description": "Subtle pink accent wash"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "primary": {
+        "value": "'TT Commons', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        "type": "fontFamily"
+      }
+    },
+    "fontSize": {
+      "caption": { "value": "14px", "type": "dimension" },
+      "body": { "value": "16px", "type": "dimension" },
+      "subheading": { "value": "19px", "type": "dimension" },
+      "headingSm": { "value": "24px", "type": "dimension" },
+      "heading": { "value": "31px", "type": "dimension" },
+      "headingLg": { "value": "40px", "type": "dimension" },
+      "display": { "value": "67px", "type": "dimension" }
+    },
+    "lineHeight": {
+      "caption": { "value": 1.43, "type": "lineHeight" },
+      "body": { "value": 1.25, "type": "lineHeight" },
+      "subheading": { "value": 1.22, "type": "lineHeight" },
+      "headingSm": { "value": 1.17, "type": "lineHeight" },
+      "heading": { "value": 1.14, "type": "lineHeight" },
+      "headingLg": { "value": 1.07, "type": "lineHeight" },
+      "display": { "value": 0.96, "type": "lineHeight" }
+    },
+    "letterSpacing": {
+      "caption": { "value": "0.29px", "type": "dimension" },
+      "body": { "value": "0.336px", "type": "dimension" },
+      "subheading": { "value": "0.399px", "type": "dimension" },
+      "headingSm": { "value": "0.504px", "type": "dimension" },
+      "heading": { "value": "0.651px", "type": "dimension" },
+      "headingLg": { "value": "0.84px", "type": "dimension" },
+      "display": { "value": "1.407px", "type": "dimension" }
+    },
+    "fontWeight": {
+      "regular": { "value": 400, "type": "fontWeight" },
+      "medium": { "value": 500, "type": "fontWeight" },
+      "semibold": { "value": 600, "type": "fontWeight" }
+    }
+  },
+  "spacing": {
+    "unit": { "value": "4px", "type": "dimension" },
+    "4": { "value": "4px", "type": "dimension" },
+    "8": { "value": "8px", "type": "dimension" },
+    "12": { "value": "12px", "type": "dimension" },
+    "16": { "value": "16px", "type": "dimension" },
+    "20": { "value": "20px", "type": "dimension" },
+    "24": { "value": "24px", "type": "dimension" },
+    "32": { "value": "32px", "type": "dimension" },
+    "36": { "value": "36px", "type": "dimension" },
+    "40": { "value": "40px", "type": "dimension" },
+    "44": { "value": "44px", "type": "dimension" },
+    "48": { "value": "48px", "type": "dimension" },
+    "60": { "value": "60px", "type": "dimension" },
+    "64": { "value": "64px", "type": "dimension" },
+    "80": { "value": "80px", "type": "dimension" },
+    "120": { "value": "120px", "type": "dimension" },
+    "144": { "value": "144px", "type": "dimension" }
+  },
+  "borderRadius": {
+    "md": { "value": "4px", "type": "dimension" },
+    "xl": { "value": "12px", "type": "dimension" },
+    "2xl": { "value": "16px", "type": "dimension" },
+    "2xl2": { "value": "20px", "type": "dimension" },
+    "3xl": { "value": "24px", "type": "dimension" },
+    "3xl2": { "value": "36px", "type": "dimension" },
+    "3xl3": { "value": "40px", "type": "dimension" },
+    "full": { "value": "100px", "type": "dimension" },
+    "buttons": { "value": "36px", "type": "dimension" },
+    "cards": { "value": "16px", "type": "dimension" },
+    "toolCards": { "value": "20px", "type": "dimension" },
+    "tiles": { "value": "12px", "type": "dimension" },
+    "inputs": { "value": "6px", "type": "dimension" },
+    "tags": { "value": "100px", "type": "dimension" }
+  },
+  "borders": {
+    "cardBorder": { "value": "1px solid #d9deeb", "type": "border" },
+    "subtleBorder": { "value": "1px solid #e7eaf4", "type": "border" },
+    "activeIndicator": { "value": "2px solid #1a91f0", "type": "border" }
+  }
+}
